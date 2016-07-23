@@ -1,0 +1,50 @@
+\documentclass[dvipdfmx,9pt]{beamer}
+\usepackage{pxjahyper}
+\usepackage{minijs}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage[dvipdfmx]{graphics}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\figurename}{Fig}
+\usefonttheme[onlymath]{serif}
+\setbeamertemplate{footline}[frame number]
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}
+
+\newcommand{\backupbegin}{
+\newcounter{framenumberappendix}
+\setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+\addtocounter{framenumberappendix}{-\value{framenumber}}
+\addtocounter{framenumber}{\value{framenumberappendix}}
+}
+
+\title[]{}
+\subtitle{}
+\institute[]{\normalsize }
+\author{}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+    \thispagestyle{empty}
+    \titlepage
+\end{frame}
+
+\section{}
+\begin{frame}\frametitle{}
+\end{frame}
+
+\backupbegin
+
+\appendix
+\section{\appendixname}
+\subsection{}
+\begin{frame}\frametitle{APPENDIX {\small }}
+\end{frame}
+
+\backupend
+
+\end{document}
